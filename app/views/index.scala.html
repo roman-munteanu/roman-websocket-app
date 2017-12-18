@@ -1,0 +1,72 @@
+@*
+ * This template takes a single argument, a String containing a
+ * message to display.
+ *@
+@(message: String)
+
+@*
+ * Call the `main` template with two arguments. The first
+ * argument is a `String` with the title of the page, the second
+ * argument is an `Html` object containing the body of the page.
+ *@
+@main("Welcome to Play") {
+
+<h1>roman-websocket-app</h1>
+
+ <div>
+  <button id="ping">Ping</button>
+  <button id="close_conn_btn">Close connection</button>
+ </div>
+
+  <fieldset>
+    <legend>Login</legend>
+    <form action="" id="login_form">
+      <div>
+        <label>username:</label>
+        <input type="text" name="username" id="username" value="" />
+      </div>
+      <div>
+        <label>password:</label>
+        <input type="password" name="password" id="password" value="" />
+      </div>
+      <button id="login_btn">Login</button>
+    </form>
+  </fieldset>
+
+  <p><button id="logout_btn">Logout</button></p>
+
+ <p>
+  <button id="subscribe_games">subscribe_games</button>
+   <button id="unsubscribe_games">unsubscribe_games</button>
+ </p>
+
+
+  <fieldset>
+    <legend>Game</legend>
+    <div>
+      <label>After ID:</label>
+      <input type="text" name="after_id" id="after_id" value="0" />
+    </div>
+    <form action="" id="game_form">
+      <div>
+        <label>ID:</label>
+        <input type="text" name="id" value="" />
+      </div>
+      <div>
+        <label>Name:</label>
+        <input type="text" name="name" value="" />
+      </div>
+      <div>
+        <label>Participants:</label>
+        <input type="text" name="participants" value="" />
+      </div>
+      <div>
+        <button id="add_game">add_game</button>
+        <button id="update_game">update_game</button>
+        <button id="remove_game">remove_game</button>
+      </div>
+    </form>
+  </fieldset>
+
+
+}
